@@ -35,7 +35,7 @@ with st.spinner("Welcome to my Diabetes analysis web app. Please wait while it's
                 """
     st.markdown(streamlit_style, unsafe_allow_html=True)
 
-    df=pd.read_csv('/Users/neeljoshi/Desktop/CSE830/diabetes.csv')
+    df=pd.read_csv('MidtermProject/diabetes.csv')
     ## WHAT I REALIZED IN MY DATASET IS MISSING VALUES ARE IN THE FORM OF 0 INSTEAD OF NAN
     ##WHAT I'M GONNA DO IS REPLACE THOSE 0 WITH MEAN OF THE RESPECTIVE COLUMN
     df['Glucose']=df['Glucose'].replace(0, df['Glucose'].mean())
