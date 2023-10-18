@@ -6,7 +6,7 @@ import pandas as pd
 
 with st.spinner("Please wait while detail analysis is loading."):
     time.sleep(5)
-    df=pd.read_csv('/Users/neeljoshi/Desktop/CSE830/diabetes.csv')
+    df=pd.read_csv('MidtermProject/diabetes.csv')
     df['Glucose']=df['Glucose'].replace(0, df['Glucose'].mean())
     df['BloodPressure']=df['BloodPressure'].replace(0, df['BloodPressure'].mean())
     df['SkinThickness']=df['SkinThickness'].replace(0, df['SkinThickness'].mean())
@@ -27,10 +27,10 @@ with st.spinner("Please wait while detail analysis is loading."):
     # should be
     show_pages(
         [
-            Page("MidtermProject.py", "Introduction to Dataset", "📊"),
-            Page("MidtermProject2.py", "Detailed Analysis", "📈"),
-            Page("MidtermProject3.py", "Deep Features Study", "🧐"),
-            Page("MidtermProject4.py", "Our Conclusion", "🎯")
+            Page("MidtermProject/MidtermProject.py", "Introduction to Dataset", "📊"),
+            Page("MidtermProject/MidtermProject2.py", "Detailed Analysis", "📈"),
+            Page("MidtermProject/MidtermProject3.py", "Deep Features Study", "🧐"),
+            Page("MidtermProject/MidtermProject4.py", "Our Conclusion", "🎯")
         ]
 )
     streamlit_style = """
