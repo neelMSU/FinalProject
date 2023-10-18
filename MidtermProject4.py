@@ -25,10 +25,10 @@ with st.spinner("Let's have a look at our conclusion."):
     # should be
     show_pages(
         [
-            Page("MidtermProject.py", "Introduction to Dataset", "📊"),
-            Page("MidtermProject2.py", "Detailed Analysis", "📈"),
-            Page("MidtermProject3.py", "Deep Features Study", "🧐"),
-            Page("MidtermProject4.py", "Our Conclusion", "🎯")
+            Page("MidtermProject/MidtermProject.py", "Introduction to Dataset", "📊"),
+            Page("MidtermProject/MidtermProject2.py", "Detailed Analysis", "📈"),
+            Page("MidtermProject/MidtermProject3.py", "Deep Features Study", "🧐"),
+            Page("MidtermProject/MidtermProject4.py", "Our Conclusion", "🎯")
         ]
 )
 
@@ -37,7 +37,7 @@ st.header("From our study we realised that BMI, Age, Glucose and number of Pregn
 st.header("Doctors should make sure that their patients glucose is not above 120, BMI is below 20, if person had they should have maximum three pregnancies, Age is below 23. Anything above these limits and alarm should sound in mind which will let doctor to tell patient of their health care. There parameters that could be controlled here are Glucose and BMI. These features of body should be regularly monitered by doctor of every patient facing danger of Diabetes to make sure he dosen't catches diabetes.")
 
 st.header("A 3D plot just to generate all the features if further interest.")
-df=pd.read_csv('/Users/neeljoshi/Desktop/CSE830/diabetes.csv')
+df=pd.read_csv('MidtermProject/diabetes.csv')
 df['Glucose']=df['Glucose'].replace(0, df['Glucose'].mean())
 df['BloodPressure']=df['BloodPressure'].replace(0, df['BloodPressure'].mean())
 df['SkinThickness']=df['SkinThickness'].replace(0, df['SkinThickness'].mean())
@@ -85,7 +85,7 @@ fig.update_layout(width=800, height=800,
                            ))
 st.plotly_chart(fig,use_container_width=True)
 
-image=Image.open('/Users/neeljoshi/Downloads/b38b2f0fc571a7d1d581e03f11d05619.png')
+image=Image.open('MidtermProject/b38b2f0fc571a7d1d581e03f11d05619.png')
 st.image(image)
 
 st.header("Any Questions??")
