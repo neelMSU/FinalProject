@@ -6,7 +6,7 @@ import altair as alt
 
 with st.spinner("Let's do some detailed study on our four features!!"):
     time.sleep(5)
-    df=pd.read_csv('/Users/neeljoshi/Desktop/CSE830/diabetes.csv')
+    df=pd.read_csv('MidtermProject/diabetes.csv')
     df['Glucose']=df['Glucose'].replace(0, df['Glucose'].mean())
     df['BloodPressure']=df['BloodPressure'].replace(0, df['BloodPressure'].mean())
     df['SkinThickness']=df['SkinThickness'].replace(0, df['SkinThickness'].mean())
@@ -19,10 +19,10 @@ with st.spinner("Let's do some detailed study on our four features!!"):
     add_page_title()
     show_pages(
         [
-            Page("MidtermProject.py", "Introduction to Dataset", "📊"),
-            Page("MidtermProject2.py", "Detailed Analysis", "📈"),
-            Page("MidtermProject3.py", "Deep Features Study", "🧐"),
-            Page("MidtermProject4.py", "Our Conclusion", "🎯")
+            Page("MidtermProject/MidtermProject.py", "Introduction to Dataset", "📊"),
+            Page("MidtermProject/MidtermProject2.py", "Detailed Analysis", "📈"),
+            Page("MidtermProject/MidtermProject3.py", "Deep Features Study", "🧐"),
+            Page("MidtermProject/MidtermProject4.py", "Our Conclusion", "🎯")
         ]
 )
 streamlit_style = """
