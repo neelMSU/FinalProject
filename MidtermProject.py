@@ -16,10 +16,10 @@ with st.spinner("Welcome to my Diabetes analysis web app. Please wait while it's
     # should be
     show_pages(
         [
-            Page("MidtermProject.py", "Introduction to Dataset", "📊"),
-            Page("MidtermProject2.py", "Detailed Analysis", "📈"),
-            Page("MidtermProject3.py", "Deep Features Study", "🧐"),
-            Page("MidtermProject4.py", "Our Conclusion", "🎯")
+            Page("MidtermProject/MidtermProject.py", "Introduction to Dataset", "📊"),
+            Page("MidtermProject/MidtermProject2.py", "Detailed Analysis", "📈"),
+            Page("MidtermProject/MidtermProject3.py", "Deep Features Study", "🧐"),
+            Page("MidtermProject/MidtermProject4.py", "Our Conclusion", "🎯")
         ]
 )
 
