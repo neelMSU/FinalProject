@@ -5,7 +5,7 @@ import plotly.graph_objects as go
 import pandas as pd
 
 with st.spinner("Please wait while detail analysis is loading."):
-    time.sleep(5)
+    time.sleep(.5)
     df=pd.read_csv('diabetes.csv')
     df['Glucose']=df['Glucose'].replace(0, df['Glucose'].mean())
     df['BloodPressure']=df['BloodPressure'].replace(0, df['BloodPressure'].mean())
@@ -30,6 +30,7 @@ with st.spinner("Please wait while detail analysis is loading."):
             Page("MidtermProject.py", "Introduction to Dataset", "📊"),
             Page("MidtermProject2.py", "Detailed Analysis", "📈"),
             Page("MidtermProject3.py", "Deep Features Study", "🧐"),
+            Page("Proj.py", "Bringing in the Power ML", "🧠"),
             Page("MidtermProject4.py", "Our Conclusion", "🎯")
         ]
 )
@@ -43,9 +44,9 @@ with st.spinner("Please wait while detail analysis is loading."):
                 </style>
                 """
     st.markdown(streamlit_style, unsafe_allow_html=True)
-    st.header("In introduction we saw that Glucose, BMI, Pregnancy and Age are four important parameters doctors should look upon.")
-    st.header("Let's go ahead and do some detailed analysis on these parameters.")
-    st.header("Using below plot, we can generate 3D plot for our four important features from our dataset.")
+    st.header("In introduction you saw that Glucose, BMI, Pregnancy and Age are four important parameters doctors should look upon.")
+    st.header("Further ahead you will see detailed analysis on these parameters.")
+    st.header("Using below plot, you can generate 3D plot for four important features from the dataset.")
     lst=['Glucose', 'BMI', 'Pregnancies','Age']
     co1,co2,co3=st.columns(3)
     with co1:

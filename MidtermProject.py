@@ -6,8 +6,9 @@ import matplotlib.pyplot as plt
 import time
 import streamlit as st
 from st_pages import Page, show_pages, add_page_title
-with st.spinner("Welcome to my Diabetes analysis web app. Please wait while it's loading."):
-    time.sleep(5)
+
+with st.spinner("Welcome to Diabetes analysis. Please wait while it's loading."):
+    time.sleep(.5)
 
 # Optional -- adds the title and icon to the current page
     add_page_title()
@@ -19,6 +20,7 @@ with st.spinner("Welcome to my Diabetes analysis web app. Please wait while it's
             Page("MidtermProject.py", "Introduction to Dataset", "📊"),
             Page("MidtermProject2.py", "Detailed Analysis", "📈"),
             Page("MidtermProject3.py", "Deep Features Study", "🧐"),
+            Page("Proj.py", "Bringing in the Power ML", "🧠"),
             Page("MidtermProject4.py", "Our Conclusion", "🎯")
         ]
 )
@@ -45,13 +47,14 @@ with st.spinner("Welcome to my Diabetes analysis web app. Please wait while it's
     df['BMI']=df['BMI'].replace(0, df['BMI'].mean())
 
     st.header("""
-    For this project I'm going to use the Diabetes Dataset. What I'm trying to find out is most obvious health condition to be focused on inorder to prevent diabetes.
+    In this presentation you will see most obvious health condition to be focused on inorder to prevent diabetes.
     """)
-    st.dataframe(df.head())
+    with st.expander("See Dataset"):
+        st.dataframe(df.head())
     st.header("Diabetes is one of the most dangerious diesease which does effect person's daily lifestyle. Dealing with such disease should be top priority.")
 
 
-    st.header("With the help of my dataset I will try to find out most probable cause for people with diabetes as well as for those with no diabetes.")
+    st.header("Here you will see most probable cause for people with diabetes as well as for those with no diabetes.")
 
     colors = ['gold', 'mediumturquoise']
     labels = ['No Diabetes','With Diabetes']
@@ -65,7 +68,7 @@ with st.spinner("Welcome to my Diabetes analysis web app. Please wait while it's
         title_text="Outcome")
     st.plotly_chart(fig)
 
-    st.header("With our plot above we can see that, even though there are 65.1% people with no Diabetes, there's still 34.9% people with this Disease.")
+    st.header("Above plot clearly explains that, even though there are 65.1% people with no Diabetes, there's still 34.9% people with this Disease.")
 
     import seaborn as sns
     import matplotlib.pyplot as plt
@@ -74,7 +77,7 @@ with st.spinner("Welcome to my Diabetes analysis web app. Please wait while it's
     sns.heatmap(df.corr(), ax=ax)
     st.write(fig)
 
-    st.header("From the above figure we can see that correlation between Outcome and Glucose is high.")
-    st.header("Thus Glucose can be considered as one of the most important factor to look upon. We can also consider BMI, Pregnancy and Age for our detailed analysis ahead.")
+    st.header("From the above figure you will be able to see that correlation between Outcome and Glucose is high.")
+    st.header("Thus Glucose can be considered as one of the most important factor to look upon. You can also consider BMI, Pregnancy and Age for the detailed analysis ahead.")
     st.header("Doctors should always look upon their patient's Glucose, BMI, Pregnancy and Age while determining their threat to get diabetes.")
-    st.header("With these features identified, further let's focus on these features specifically in Detailed Analysys.")
+    st.header("With these features identified, now the focus should be only on these features specifically in Detailed Analysys.")

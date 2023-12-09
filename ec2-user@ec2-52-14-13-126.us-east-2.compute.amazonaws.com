@@ -4,5 +4,4 @@ plotly==5.6.0
 matplotlib==3.7.2
 st_pages==0.4.5
 altair==5.1.1
-scikit-learn==1.2.2
-streamlit
+tensorflow==2.15.0

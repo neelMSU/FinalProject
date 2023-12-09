@@ -22,6 +22,7 @@ with st.spinner("Let's do some detailed study on our four features!!"):
             Page("MidtermProject.py", "Introduction to Dataset", "📊"),
             Page("MidtermProject2.py", "Detailed Analysis", "📈"),
             Page("MidtermProject3.py", "Deep Features Study", "🧐"),
+            Page("Proj.py", "Bringing in the Power ML", "🧠"),
             Page("MidtermProject4.py", "Our Conclusion", "🎯")
         ]
 )
@@ -44,7 +45,7 @@ hist = alt.Chart(df).mark_bar().encode(x = alt.X(option,
                                                 bin = alt.BinParams(maxbins = 30)), 
                                               y = 'count()',color = 'Outcome').properties(width=680,height=500) 
 st.altair_chart(hist)
-tex=['We can see that most people with Diabetes have Glucose range of 120-130. We can infer that Glucose beyond 120 is most dangerious. Also most people without diabetes have gluose range of 100-110. So we can infer that inorder to remain safe the maximum Glucose value is 100.',
+tex=['Most people with Diabetes have Glucose range of 120-130. We can infer that Glucose beyond 120 is most dangerious. Also most people without diabetes have gluose range of 100-110. So we can infer that inorder to remain safe the maximum Glucose value is 100.',
 "For BMI the care should be taken that the value is within 20-22. Because that's the value where people are not having Diabetes.",
 "Anyone with 3-4 pregnancies should take care of their health as there are more people with diabetes. So people with more than 3 pregnancies should take care of their health most.",
 "Age is one of the most important and crucial factor to be considered while analyzing how someone is prone to get Diabetes. Turns out that people with age 23 and beyond as abovious should take super care of their health if they don't want to get affected by Diabetes. We can see most people with Diabetes are with age range of 28-30. So let's say average age of 25 would be a best point to be start taking care."]

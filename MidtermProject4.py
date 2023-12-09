@@ -28,6 +28,7 @@ with st.spinner("Let's have a look at our conclusion."):
             Page("MidtermProject.py", "Introduction to Dataset", "📊"),
             Page("MidtermProject2.py", "Detailed Analysis", "📈"),
             Page("MidtermProject3.py", "Deep Features Study", "🧐"),
+            Page("Proj.py", "Bringing in the Power ML", "🧠"),
             Page("MidtermProject4.py", "Our Conclusion", "🎯")
         ]
 )
@@ -89,3 +90,11 @@ image=Image.open('b38b2f0fc571a7d1d581e03f11d05619.png')
 st.image(image)
 
 st.header("Any Questions??")
+
+st.header("Technologies used")
+image=Image.open('aws.png')
+st.image(image)
+image=Image.open('py.png')
+st.image(image)
+image=Image.open('st.png')
+st.image(image)
